@@ -1,38 +1,173 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* # Front-end Style Guide
+## Layout
+The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+## Colors
+### Primary
+- Red: hsl(0, 100%, 74%)
+- Green: hsl(154, 59%, 51%)
+### Accent
+- Blue: hsl(248, 32%, 49%)
+### Neutral
+- Dark Blue: hsl(249, 10%, 26%)
+- Grayish Blue: hsl(246, 25%, 77%)
+## Typography
+### Body Copy
+- Font size: 16px
+### Font
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 500, 600, 700 */
+body {
   color: white;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+.body {
+  color: white;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+header {
+}
+main {
+  background-image: url("./images/bg-intro-mobile.png");
+  background-size: cover;
+  background-color: hsl(0, 100%, 74%);
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 25px 1fr 50px;
+  grid-template-rows: 25px 2fr 8fr 100px;
+}
+img {
+  width: auto;
+  height: auto;
+}
+.left {
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  height: auto;
+  align-self: start;
+}
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.right {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  height: auto;
+  place-self: center;
+}
+.top {
+  width: 80%;
+  margin: auto;
+
+  background: hsl(248, 32%, 49%);
+  overflow: hidden;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 10px 2px -2px hsl(0, 46%, 30%);
+}
+.trial {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.bottom {
+  width: 80%;
+  margin: auto;
+  background: white;
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 40px;
+  box-shadow: 0 10px 2px -2px hsl(0, 46%, 30%);
+}
+input {
+  width: 90%;
+  height: 3rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  color: hsl(249, 10%, 26%);
+  text-indent: 2rem;
+  border-style: solid;
+  border-color: lightgray;
+  border-width: thin;
+  outline: none;
+  font-size: 16px;
+}
+button {
+  width: 90%;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  background-color: hsl(154, 59%, 51%);
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  border-style: none;
+  box-shadow: 0 10px 2px -2px hsl(154, 70%, 26%);
+}
+.terms {
+  color: hsl(246, 25%, 77%);
+  font-size: 16px;
+}
+a {
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
+  text-decoration: none;
+}
+.bold {
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 1300px) {
+  main {
+    background-image: url("./images/bg-intro-desktop.png");
+    background-color: hsl(0, 100%, 74%);
+    padding: 40px 10px;
+    display: grid;
+    grid-template-columns: 100px 1fr 60px 60px 1fr 100px;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr;
+    /* 0.5fr 1fr 1fr 1fr 0.5fr */
   }
-  to {
-    transform: rotate(360deg);
+  .left {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: left;
+    height: auto;
+    place-self: center;
+  }
+  .learn {
+    font-size: 2.8rem;
+  }
+  .right {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 5;
+
+    height: auto;
+    place-self: center;
+  }
+  .trial {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .terms {
+    font-size: 9px;
   }
 }
